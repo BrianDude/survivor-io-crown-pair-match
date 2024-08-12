@@ -56,7 +56,7 @@ export const Tabs: React.FC<TabsProps> = ({ initialTabs }) => {
 
   return (
     <div className="w-full h-full">
-      <div className="fixed bottom-0 flex border-b">
+      <div className="fixed bottom-0 left-0 flex max-w-full overflow-auto border-b">
         {tabs.map((tab, index) => (
           <div key={tab.id} className="flex items-center">
             <button
