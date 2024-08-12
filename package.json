@@ -2,7 +2,7 @@
   "name": "survivor-io-crown-pair-match",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://BrianDude.github.io/survivor-io-crown-pair-match",
+  "homepage": "https://BrianDude.github.io/survivor-io-crown-pair-match/",
   "type": "module",
   "scripts": {
     "dev": "vite",
