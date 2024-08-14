@@ -8,7 +8,7 @@ const App: React.FC = () => {
       id: 1,
       label: "Grid 1",
       content: Grid,
-      closable: true,
+      closable: false,
       gridState: { boxImages: Array(25).fill(null) },
     },
   ];
