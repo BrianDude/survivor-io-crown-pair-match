@@ -56,35 +56,39 @@ export const Tabs: React.FC<TabsProps> = ({ initialTabs }) => {
 
   return (
     <div className="w-full h-full">
-      <div className="fixed bottom-0 left-0 flex max-w-full overflow-auto border-b">
-        {tabs.map((tab, index) => (
-          <div key={tab.id} className="flex items-center">
+      <div className="fixed bottom-0 left-0 flex w-full max-w-full overflow-auto border-b">
+        <div className="flex items-center justify-center w-full">
+          <div className="flex w-full max-w-screen-md">
+            {tabs.map((tab, index) => (
+              <div key={tab.id} className="flex items-center">
+                <button
+                  className={`px-6 py-4 text-lg font-semibold focus:outline-none ${
+                    index === activeTab
+                      ? "border-t-2 border-blue-500 text-blue-500"
+                      : "text-gray-500 hover:text-blue-500"
+                  }`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  {tab.label}
+                </button>
+                {tab.closable && (
+                  <button
+                    className="ml-2 text-gray-500 hover:text-red-500 focus:outline-none"
+                    onClick={() => closeTab(tab.id)}
+                  >
+                    <X size={24} />
+                  </button>
+                )}
+              </div>
+            ))}
             <button
-              className={`px-4 py-2 focus:outline-none ${
-                index === activeTab
-                  ? "border-t-2 border-blue-500 text-blue-500"
-                  : "text-gray-500 hover:text-blue-500"
-              }`}
-              onClick={() => setActiveTab(index)}
+              className="px-4 py-2 text-green-500 hover:text-green-600 focus:outline-none"
+              onClick={addNewGridTab}
             >
-              {tab.label}
+              <Plus size={24} />
             </button>
-            {tab.closable && (
-              <button
-                className="ml-2 text-gray-500 hover:text-red-500 focus:outline-none"
-                onClick={() => closeTab(tab.id)}
-              >
-                <X size={16} />
-              </button>
-            )}
           </div>
-        ))}
-        <button
-          className="px-4 py-2 text-green-500 hover:text-green-600 focus:outline-none"
-          onClick={addNewGridTab}
-        >
-          <Plus size={20} />
-        </button>
+        </div>
       </div>
       <div className="flex items-center h-full py-4">
         {tabs.length > 0 ? (
