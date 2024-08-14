@@ -21,7 +21,7 @@ export const Grid: React.FC<GridProps> = ({ gridState, updateGridState }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full gap-4">
+    <div className="flex flex-col items-center justify-center w-full h-full gap-4 lg:p-40">
       <div className="flex flex-wrap w-11/12 border border-white place-items-center">
         {gridState.boxImages.map((img, index) => (
           <Box
