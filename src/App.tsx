@@ -14,7 +14,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="container h-screen max-w-screen-md p-4 mx-auto overflow-hidden">
+    <div className="container h-screen max-w-screen-md p-4 mx-auto overflow-hidden max-h-svh">
       <Tabs initialTabs={initialTabs} />
     </div>
   );
