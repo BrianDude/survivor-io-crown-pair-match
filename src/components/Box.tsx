@@ -19,7 +19,7 @@ import robo from "../assets/robo.png";
 import tsu from "../assets/tsu.png";
 import vuongmieng from "../assets/vuongmieng.png";
 import wes from "../assets/wes.png";
-import { X } from "lucide-react";
+import { Undo } from "lucide-react";
 
 const images = [
   gau,
@@ -85,13 +85,13 @@ export const Box: React.FC<BoxProps> = ({
       >
         {imageUrl && (
           <button
-            className="absolute top-0 right-0 p-1 text-xs text-white bg-red-500"
+            className="absolute top-0 right-0 p-4 text-xs text-white rounded-md bg-slate-800"
             onClick={(e) => {
               e.stopPropagation();
               onReset();
             }}
           >
-            <X size={16} />
+            <Undo size={48} />
           </button>
         )}
       </div>
